@@ -1,0 +1,156 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Mi Ejercicio Grid Bootstrap - Pastel</title>
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" xintegrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+    <style>
+      body {
+        background-color: #f0f7f7; /* Un celeste pastel muy suave */
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      }
+      .custom-col {
+        padding-top: 1.5rem;
+        padding-bottom: 1.5rem;
+        background-color: #e0f2f7; /* Un azul claro pastel para las columnas */
+        border: 1px solid #b2e0e0; /* Borde más suave */
+        border-radius: 0.5rem; /* Bordes un poco más redondeados */
+        margin-bottom: 1rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 80px;
+        font-weight: bold;
+        color: #4a7c8c; /* Un azul verdoso oscuro pastel para el texto */
+        text-align: center;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08); /* Sombra más ligera */
+      }
+      .custom-header {
+        background: linear-gradient(45deg, #a7e1f4, #c9f0f9); /* Degradado azul-morado pastel */
+        color: #4a7c8c; /* Texto más suave para el encabezado */
+        padding: 4rem 0; /* Más padding para el encabezado */
+        margin-bottom: 2.5rem;
+        border-bottom-left-radius: 20px;
+        border-bottom-right-radius: 20px;
+        box-shadow: 0 6px 12px rgba(0,0,0,0.1); /* Sombra un poco más prominente */
+      }
+      .custom-header h1 {
+        color: #315d6e; /* Un tono más oscuro para el título del header */
+        font-weight: 700;
+      }
+      .custom-header .lead {
+        color: #5c97a9; /* Un tono medio para el lead text */
+      }
+      .custom-footer {
+        background-color: #8bbdd1; /* Un azul grisáceo pastel oscuro */
+        color: #e0f2f7; /* Texto claro pastel en el footer */
+        padding: 2.5rem 0;
+        margin-top: 4rem;
+        border-top-left-radius: 15px;
+        border-top-right-radius: 15px;
+      }
+      h2 {
+        color: #5cb85c; /* Un verde pastel suave */
+        font-weight: 600;
+        margin-top: 2.5rem;
+        margin-bottom: 2rem;
+        text-shadow: 1px 1px 2px rgba(0,0,0,0.05);
+      }
+      h3 {
+        color: #f0ad4e; /* Un naranja pastel para los subtítulos */
+        margin-top: 1.8rem;
+        margin-bottom: 1.2rem;
+        font-weight: 500;
+      }
+      p {
+        color: #6c757d; /* Un gris de texto estándar que combina bien */
+      }
+    </style>
+  </head>
+  <body>
+
+    <header class="custom-header text-center">
+      <div class="container-fluid">
+        <h1 class="display-4 mb-2">Mi Ejercicio del Sistema Grid de Bootstrap</h1>
+        <p class="lead">Aquí estoy probando los componentes de diseño responsivo que analicé.</p>
+      </div>
+    </header>
+
+    <div class="container">
+      
+      <h2 class="text-center">Mis Pruebas Básicas de Grid</h2>
+
+      <h3>1. Mi Fila de Columnas Iguales (<code>.col-4</code>)</h3>
+      <p class="text-center">Aquí dividí mi fila en tres columnas de ancho igual.</p>
+      <div class="row">
+        <div class="col-4"><div class="custom-col"><code>Soy .col-4</code></div></div>
+        <div class="col-4"><div class="custom-col"><code>Soy .col-4</code></div></div>
+        <div class="col-4"><div class="custom-col"><code>Soy .col-4</code></div></div>
+      </div>
+
+      <h3>2. Mis Columnas Responsivas (<code>.col-12 .col-md-6 .col-lg-4</code>)</h3>
+      <p class="text-center">Mis columnas se apilan en móvil, se ponen en 2 columnas en tableta y 3 en escritorio.</p>
+      <div class="row">
+        <div class="col-12 col-md-6 col-lg-4"><div class="custom-col"><code>.col-12 .col-md-6 .col-lg-4</code></div></div>
+        <div class="col-12 col-md-6 col-lg-4"><div class="custom-col"><code>.col-12 .col-md-6 .col-lg-4</code></div></div>
+        <div class="col-12 col-lg-4"><div class="custom-col"><code>.col-12 .col-lg-4</code><br>(Yo me apilo en MD)</div></div>
+      </div>
+
+      <h2 class="text-center mt-5">Mis Pruebas Avanzadas de Grid</h2>
+
+      <h3>3. Mis Columnas de Ancho Automático (<code>.col</code>)</h3>
+      <p class="text-center">Aquí dejo que Bootstrap divida el espacio solo, sin ponerle número.</p>
+      <div class="row">
+        <div class="col"><div class="custom-col"><code>Soy .col</code> (Auto)</div></div>
+        <div class="col-6"><div class="custom-col"><code>Soy .col-6</code> (Fijo)</div></div>
+        <div class="col"><div class="custom-col"><code>Soy .col</code> (Auto)</div></div>
+      </div>
+
+      <h3>4. Mis Columnas con Anchos Diferentes</h3>
+      <p class="text-center">Hice una columna principal y una barra lateral que se apila en móvil.</p>
+      <div class="row">
+        <div class="col-12 col-md-8"><div class="custom-col"><code>.col-12 .col-md-8</code><br>(Soy el contenido principal)</div></div>
+        <div class="col-12 col-md-4"><div class="custom-col"><code>.col-12 .col-md-4</code><br>(Soy la barra lateral)</div></div>
+      </div>
+
+      <h3>5. Mis Pruebas con Offsets (Desplazamientos)</h3>
+      <p class="text-center">Estoy usando <code>.offset-md-*</code> para empujar mis columnas a la derecha.</p>
+      <div class="row justify-content-center">
+        <div class="col-md-4 offset-md-2"><div class="custom-col"><code>.col-md-4 .offset-md-2</code></div></div>
+      </div>
+      <div class="row justify-content-center">
+        <div class="col-md-4 offset-md-4"><div class="custom-col"><code>.col-md-4 .offset-md-4</code></div></div>
+      </div>
+
+      <h3>6. Mi Prueba de Orden de Columnas (<code>.order-*</code>)</h3>
+      <p class="text-center">Aquí cambio el orden visual. ¡Voy a probarlo achicando la ventana!</p>
+      <div class="row">
+        <div class="col-md-6 order-md-last"><div class="custom-col"><code>.col-md-6 .order-md-last</code><br>(Soy el 2do en HTML, pero me muevo al final en MD)</div></div>
+        <div class="col-md-6 order-md-first"><div class="custom-col"><code>.col-md-6 .order-md-first</code><br>(Soy el 1ro en HTML, pero me muevo al inicio en MD)</div></div>
+      </div>
+
+      <h3>7. Mis Gutters Personalizados (<code>.g-*</code>)</h3>
+      <p class="text-center">Aquí estoy controlando el espacio entre columnas, usando un gutter más grande (<code>.g-5</code>).</p>
+      <div class="row g-5">
+        <div class="col-6"><div class="custom-col"><code>Soy .col-6</code></div></div>
+        <div class="col-6"><div class="custom-col"><code>Soy .col-6</code></div></div>
+        <div class="col-6"><div class="custom-col"><code>Soy .col-6</code></div></div>
+        <div class="col-6"><div class="custom-col"><code>Soy .col-6</code></div></div>
+      </div>
+
+    </div>
+
+    <footer class="custom-footer text-center">
+      <div class="container">
+        <p class="mb-0">&copy; 2025 Mi Ejercicio de Grid Bootstrap.</p>
+        <p class="mb-0">Hecho por Emmanuel Ibarra Ruano con Bootstrap 5.</p>
+      </div>
+    </footer>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" xintegrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+  </body>
+</html>
+
